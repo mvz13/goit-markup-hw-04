@@ -74,19 +74,28 @@ body {
   width: 294px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.site-nav .nav-item {
-  color: var(--basic-color);
+.nav-item {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 28px;
+  color: var(--basic-color);
+  border-bottom: 4px solid transparent;
   text-decoration: none;
 }
-.site-nav .nav-item:hover,
-.site-nav .nav-item:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
 }
 .contact {
   display: flex;
@@ -94,24 +103,20 @@ body {
   margin-left: auto;
 }
 .link {
-  color: var(--paragr-gris-color);
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.contact-link:not(:last-child) {
-  margin-right: 50px;
+  color: var(--paragr-gris-color);
 }
 .nav-contacts-icon {
   margin-right: 10px;
-  fill: var(--paragr-gris-color);
+  fill: currentColor;
 }
-.nav-contacts-icon:hover,
-.nav-contacts-icon:focus {
-  fill: var(--accent-color);
+.contact-link:not(:last-child) {
+  margin-right: 50px;
 }
 .link:hover,
 .link:focus {
@@ -322,20 +327,18 @@ body {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  color: #afb1b8;
 }
 .contact-team-item:not(:last-child) {
   margin-right: 10px;
 }
+.contact-team-svg {
+  fill: currentColor;
+}
 .contact-team-button:hover,
 .contact-team-button:focus {
   background-color: var(--accent-color);
-}
-.contact-team-svg {
-  fill: #afb1b8;
-}
-.contact-team-svg:hover,
-.contact-team-svg:focus {
-  fill: var(--white-color);
+  color: var(--white-color);
 }
 /*Regular Clients*/
 .clients-title {
@@ -353,7 +356,7 @@ body {
   display: flex;
   padding-bottom: 94px;
 }
-.client {
+.client-link {
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
@@ -362,22 +365,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #afb1b8;
 }
 .client-icon {
-  fill: #afb1b8;
-}
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 .client:not(:last-child) {
   margin-right: 30px;
 }
-.client:hover,
-.client:focus {
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent-color);
   border-color: var(--accent-color);
 }
-
 .footer {
   min-width: 1230px;
   padding-top: 45px;
